@@ -68,7 +68,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "test:coverage": "node scripts/test.js --coverage --watchAll=false",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "e2e": "jest -c jest.e2e.config.js"
   },
   "browserslist": {
     "production": [
