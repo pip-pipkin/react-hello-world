@@ -1,8 +1,8 @@
 module.exports = {
     "setupFilesAfterEnv": [],
     "testMatch": [
-      "<rootDir>/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/*.{spec,test}.{js,jsx,ts,tsx}",
+      "<rootDir>/e2e/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/e2e/*.{spec,test}.{js,jsx,ts,tsx}",
     ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",

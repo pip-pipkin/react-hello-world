@@ -4,8 +4,9 @@ require('selenium-webdriver/firefox')
 require('chromedriver')
 require('geckodriver')
 
-const rootURL = 'https://www.mozilla.org/en-US/'
+const rootURL = 'http://localhost:3000/'
 let driver
+process.env.USE_PROMISE_MANAGER = false;
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000 * 60 * 5
 const waitUntilTime = 20000
 
@@ -27,9 +28,9 @@ it('initialises the context', async () => {
   await driver.get(rootURL)
 })
 
-it('should click on navbar button to display a drawer', async () => {
-  const anchor = await querySelector('[href=\'/en-US/firefox/\']', driver)
+it('should display Learn React text', async () => {
+  const anchor = await querySelector('[href=\'https://reactjs.org\']', driver)
   const actual = await anchor.getText()
-  const expected = 'Firefox'
+  const expected = 'Learn React'
   expect(actual).toEqual(expected)
 })
