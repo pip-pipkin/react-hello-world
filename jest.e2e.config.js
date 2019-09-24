@@ -1,4 +1,7 @@
 module.exports = {
+  "roots": [
+    "<rootDir>/e2e"
+  ],
     "setupFilesAfterEnv": [],
     "testMatch": [
       "<rootDir>/e2e/__tests__/**/*.{js,jsx,ts,tsx}",
