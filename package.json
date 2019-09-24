@@ -68,7 +68,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "test:coverage": "node scripts/test.js --coverage --watchAll=false",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "pipeline": "npm i && npm run lint && npm run test:coverage && npm run build"
   },
   "browserslist": {
     "production": [

@@ -4,7 +4,8 @@ module.exports = {
   ],
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
-    "!src/**/*.d.ts"
+    "!src/**/*.d.ts",
+    "!src/index.js"
   ],
   "coverageThreshold": {
     "global": {
