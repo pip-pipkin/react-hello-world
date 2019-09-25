@@ -1,22 +1,17 @@
 import React from 'react';
-
-function App() {
+import Container from '@material-ui/core/Container'
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Welcome to future state underwriting!
+        </Typography>
+      </Box>
+
+    </Container>
   );
 }
 
