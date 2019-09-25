@@ -1,17 +1,17 @@
 import React from 'react';
-import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box'
+import { BrowserRouter as Router, Redirect, Switch, Route } from 'react-router-dom'
+import Login from './app/Login'
+import NotFound from './app/NotFound.js';
+
 const App = () => {
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Welcome to future state underwriting!
-        </Typography>
-      </Box>
-
-    </Container>
+    <Router>
+      <Switch>
+        <Redirect from="/" exact to="/login" /> 
+        <Route path="/login" component={Login} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
