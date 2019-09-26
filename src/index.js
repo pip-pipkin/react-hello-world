@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CssBaseLine from '@material-ui/core/CssBaseline'
-import { Provider } from 'react-redux'
-import configureStore from './Store'
 import App from './App';
 
-const store = configureStore()
 ReactDOM.render(
-  <Provider store={store}>
+  <React.Fragment>
     <CssBaseLine />
     <App />
-  </Provider>, 
+  </React.Fragment>,
   document.getElementById('root'))
